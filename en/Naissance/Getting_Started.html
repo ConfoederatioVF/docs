@@ -1,0 +1,81 @@
+<!--
+title: Getting Started
+description: Starter guide to using Naissance GIS to draw historical and contemporary maps.
+published: true
+date: 2026-07-05T02:22:15.284Z
+tags: naissance
+editor: ckeditor
+dateCreated: 2026-07-02T12:40:14.403Z
+-->
+
+<h3>Installing Naissance</h3>
+<p>The first step in using Naissance is to install it. The process for doing so depends on whether you are on Windows (default), or MacOS/Linux. Naissance GIS is unavailable for mobile devices.</p>
+<p><strong>1. Installation (Windows)</strong></p>
+<ol>
+  <li>Visit <a href="https://github.com/ConfoederatioVF/Naissance/releases/tag/1.9.2b-skeleton">Naissance's Latest Release</a> page.</li>
+  <li>Click on the <strong>[Download (Windows/MacOS/Linux)]</strong> button. This will take you to a file download link for the software's <code>.zip</code> file.</li>
+  <li>Download and extract the ZIP file on your computer.</li>
+  <li>Run <code>naissance.exe</code>.</li>
+</ol>
+<p><strong>2. Installation (MacOS/Linux)</strong></p>
+<ol>
+  <li>Visit <a href="https://github.com/ConfoederatioVF/Naissance/releases/tag/1.9.2b-skeleton">Naissance's Latest Release</a> page.</li>
+  <li>Download Node.JS if not installed: <a href="https://nodejs.org/en/download">https://nodejs.org/en/download</a>.</li>
+  <li>Click on the <strong>[Download (Windows/MacOS/Linux)]</strong> button. This will take you to a file download link for the software's <code>.zip</code> file.</li>
+  <li>Download and extract the ZIP file on your computer.</li>
+  <li>Run <code>autorun.sh</code>.</li>
+</ol>
+<h3>Startup Screen</h3>
+<p>Once on your computer, Naissance should boot up smoothly. It may take several seconds to load if it is your first time. After a while, you should be greeted by a screen that appears as follows.</p>
+<figure class="image"><img src="/crd/naissance/getting_started_startup_screen.jpg">
+  <figcaption>The startup screen as it appears in 1.92b.</figcaption>
+</figure>
+<p>Unlike other GIS suites, we have chosen to make it simple to use without sacrificing the software's capability. The UI is divided into the leftbar (at left), topbar (at top), and rightbar (at right). The main map you are currently editing appears in the centre.</p>
+<p>By default, a basemap is preloaded, but this can be changed. Click on <code>Toolbox</code> &gt; <code>More</code> &gt; <code>Create Tile Layer</code> &gt; Select a Tilemap Preset &gt; <code>Apply as Base Layer</code>. Now rename 'New Tile Layer' to whatever you wish.</p>
+<figure class="image"><img src="/crd/naissance/getting_started_change_basemap.png"></figure>
+<p>You have now learned how to use a basemap of your choice.</p>
+<h3>Map Controls</h3>
+<p>Now that we have a solid basemap, press <code>X</code> to close each window. Windows in Naissance can often be closed and resized by hovering over the edges.</p>
+<p>On most devices, Middle Mouse Button <code>(MMB)</code> is used to pan the map by holding down and moving the mouse. Some mice do not have a scroll wheel. On such devices, in the bottom right under <code>Brush</code>, toggle on <code>Disable Brush</code>. This allows you to pan the map with the Left Mouse Button <code>(LMB)</code>.</p>
+<p>The scroll wheel zooms the map in and out. Ctrl + MMB tilts the map into a 2.5D view, and can also be used for rotating the map.</p>
+<h3>Using the Brush</h3>
+<p>Unlike many other GIS programs, Naissance GIS revolves around the <strong>Brush</strong>, pictured below. We will touch on Mapmodes in a later tutorial.</p>
+<figure class="image"><img src="/crd/naissance/getting_started_brush.png">
+  <figcaption>The Brush as it appears by default.</figcaption>
+</figure>
+<p>This is similar to the Brush found in many paint applications, such as MS Paint or Paint.NET, but with modern geospatial tools. <code>Ctrl + Scroll Wheel</code> adjusts the size of your brush, which you can see in the bottom right. It forms a black outline around your cursor.</p>
+<p>To get started with the Brush, we will try to create three polygons in Flanders, Brussels, and Wallonia. <code>Right Click on Map</code> &gt; <code>New Polygon</code> &gt; Change name to <code>Brussels</code> &gt; <code>Confirm</code>. In your <strong>Leftbar</strong> (Hierarchy), you will now see a new Polygon is selected.</p>
+<p>Simply hold down <code>Left Click</code> and drag to paint, adjusting the size of your brush as necessary. Holding down <code>Right Click</code> will subtract from the current Polygon. In the bottom right under <strong>Fill Colour</strong>, we can change the fill of the new Polygon we have just created. Drag it to a light violet.</p>
+<figure class="image"><img src="/crd/naissance/getting_started_brussels.jpg">
+  <figcaption>A Brussels painted using the default Brush.</figcaption>
+</figure>
+<p>Perhaps we do not always want our Polygons to look so blobby, however. This is where <strong>Brush Modes</strong> come in. Zooming back out to all of Belgium, click on <code>Brush Mode</code>, and change it to <code>Node</code>. This uses point-based snapping instead.</p>
+<p>Now, <code>Right Click on Map</code> &gt; <code>New Polygon</code> &gt; Change name to <code>Wallonia</code> &gt; <code>Confirm</code>. This creates a new Polygon, just like before. Change the fill colour to a sturdy blue. Begin clicking on the map as necessary. A <code>Double Click</code> will apply your new node changes.</p>
+<figure class="image"><img src="/crd/naissance/getting_started_wallonia_1.png">
+  <figcaption>A polygon before and after being edited.</figcaption>
+</figure>
+<p>If you make a mistake, simply close the node selection, and hold down <code>Ctrl</code> when finishing the edit. This will create a red selection, allowing you to remove bits from the Polygon you have.</p>
+<figure class="image"><img src="/crd/naissance/getting_started_wallonia_2.jpg">
+  <figcaption>Node editors can subtract from a Polygon, similar to a lasso.</figcaption>
+</figure>
+<p>Finally, let's try something different. Since we want these geometries to be mutually exclusive, we need to place them in a <strong>Layer</strong>. Click on <code>Toolbox</code> &gt; <code>Create New Layer</code> &gt; Change Name to 'Belgium'. Now drag both 'Brussels' and 'Wallonia' underneath it in the <code>Hierarchy</code>.</p>
+<p>For ergonomic reasons, geometries under a layer are typically hidden. If you wish to show them, click on the three dots next to the Layer in the Hierarchy, and toggle <code>Show Layer Geometries</code>. Now, create a new Polygon for Flanders, and change the <code>Fill Colour</code> as before. The look of something is called a <strong>Symbol</strong>. From here on out, changing how a Geometry looks will be called <strong>changing the symbol</strong>.</p>
+<p>Click on 'Belgium' to ensure it is in a red outline to select the given layer. Now, click on <code>Toolbox</code> &gt; <code>Create New Polygon</code> &gt; Change Name to 'Flanders'. I will personally use a yellow colour for Flanders.</p>
+<figure class="image"><img src="/crd/naissance/getting_started_belgium.jpg">
+  <figcaption>The snap to feature for layers. Don't worry about the hook in the northern Flemish border near Zeeland, it can be subtracted similarly.</figcaption>
+</figure>
+<p>It is perfectly fine for your lasso to overlap when sculpting Polygons. They will snap to existing borders in a layer by default.</p>
+<p>You have now learned how to draw basic borders in Naissance. Switch your Brush Mode back to Default, and click on Flanders. This will bring up an info panel showing its data and possible actions. Data are sorted into Keyframes, which detail the dates and times at which individual Geometries changed.</p>
+<p>Click on 'Finish Geometry' to stop editing it.</p>
+<h3>Using the Leftbar</h3>
+<p>At this point, you may be keen on changing the dates at which your polygons appear. The default date is the present day, and so if we go back to 1980 in the Date, all 3 are hidden, as they have not 'started existing' yet. We should probably change this.</p>
+<p>Keyframes can be moved individually via <code>Click on Geometry</code> &gt; <code>Move Keyframe to Date</code>, but this can be tedious. If we want to move everything on the screen to a certain date, we can do so through the Timeline.</p>
+<figure class="image"><img src="/crd/naissance/getting_started_timeline.png"></figure>
+<p>Click on <code>Timeline</code> &gt; <code>Right Click on Highlighted Keyframe</code> &gt; <code>Move Keyframe To</code> &gt; <code>1 January 1980</code> &gt; Press <code>Confirm</code>.</p>
+<p>Now, all our polygons will reappear in the past as needed. New Geometries created at a specific Date will start existing at that Date, and mastering both <strong>Entities</strong> (which refer to Features/Geometries) and <strong>Keyframes</strong> (which refer to data changes over time) are key to mastering <strong>Naissance</strong>.</p>
+<p>But first, we should probably learn how to save and load our files.</p>
+<h3>Learning More</h3>
+<p>You can reaccess this Wiki at any time by simply pressing the <code>Help</code> button in the top right, under <code>Date</code>.</p>
+<ul>
+  <li>Next Tutorial: <a href="Saving &amp; Loading">Saving &amp; Loading</a></li>
+</ul>
