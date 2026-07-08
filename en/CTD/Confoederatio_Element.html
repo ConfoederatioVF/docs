@@ -1,0 +1,20 @@
+<!--
+title: Confoederatio Element
+description: Documentation for our Confoederatio's self-hosted instance of Matrix Element.
+published: true
+date: 2026-07-08T08:43:53.042Z
+tags: confoederatio, element, matrix, discord
+editor: ckeditor
+dateCreated: 2026-07-08T08:43:53.042Z
+-->
+
+<h2>Abstract</h2>
+<p><strong>Confoederatio Element (</strong><a href="https://element.confoederatio.org/"><strong>https://element.confoederatio.org/</strong></a><strong>) </strong>is the self-hosted instance of <a href="https://element.io/en">Matrix Element</a> used for important communications. It bridges the main Confoederatio <a href="https://discord.gg/9KKgZgpGHM">Discord</a>, meaning messages within CONFOEDERATIO_ travel back and forth between multiple chat services.</p>
+<figure class="image image_resized" style="width:50.02%;"><img src="/ctd/element/confoederatio_element.png">
+  <figcaption>The main logo/banner for Confoederatio Element.</figcaption>
+</figure>
+<p>Hosting for servers are kept on hardware (8TB, 128GB RAM) maintained by Confoederatio members with physical ownership. It is not a VPS. Traffic is routed via Cloudflare tunnels to Confoederatio's main domain, which is why the subdomain is <code>element</code>. As a Matrix instance, the federated URL is <code>matrix.confoederatio.org</code>.</p>
+<p>Email verification is managed via Resend/Proton, so you will see emails from <code>noreply@confoederatio.org</code> when verifying. Domain hosting is hybridised between Cloudflare/GoDaddy in case of an outage on either. Users can create custom Spaces/Rooms which may either be public or E2EE for confidential messaging. Only the primary CONFOEDERATIO_ space is federated.</p>
+<p>The <code>.onion</code> domain for Confoederatio Element connects directly to our physical servers, without Cloudflare tunnels or other proxies, but you must use Tor or another browser with which it is compatible: <a href="http://rrqaziswwxa2kuv5qxiyuwfhr6u6p3ohly3ig7lmgrve3juyyhcvq2yd.onion/">http://rrqaziswwxa2kuv5qxiyuwfhr6u6p3ohly3ig7lmgrve3juyyhcvq2yd.onion/</a>.</p>
+<h2>Migrating to Confoederatio Element</h2>
+<p>Members, associates, or others with the public link may also feel free to migrate their Discords to Confoederatio Element. We provide technical services on how to do so, and you can register a bridge between your Confoederatio Element <strong>Space </strong>and your primary Discord server via <a href="https://bridge.confoederatio.org/">https://bridge.confoederatio.org/</a>. This will require you to have the bot invited with read/write perms in the channels you wish to link.</p>
