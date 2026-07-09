@@ -2,7 +2,7 @@
 title: Actions Schema
 description: The current JSON schema for Actions handling.
 published: true
-date: 2026-07-09T07:18:15.165Z
+date: 2026-07-09T07:21:52.027Z
 tags: naissance, schema, actions, dals
 editor: ckeditor
 dateCreated: 2026-07-09T07:17:18.763Z
@@ -13,9 +13,10 @@ dateCreated: 2026-07-09T07:17:18.763Z
   <li><code>config.actions.&lt;category_key&gt;</code>: Object<ul>
       <li><code>&lt;action_key&gt;</code>: Object<ul>
           <li>.name: string</li>
-          <li>.draw_function*: <code>async function(arg0_naissance_obj)</code> - The UI function that gets called when the respective button in actions palette is called.</li>
+          <li>.do_not_bind_to_feature=false: boolean - Overrides <code>.scope</code> behaviour for Geometry actions.</li>
+          <li>.draw_function*: <code>async function(arg0_naissance_obj.ui)</code> - The UI function that gets called when the respective button in actions palette is called.</li>
           <li>.node_options: Object - Binds the given action to a node, specifying parameters to pass to <code>.special_function</code> as a JSON packet.</li>
-          <li>.scope: string[]|string - The <code>naissance.</code> classes to scope the Action to when palettes are brought up.</li>
+          <li>.scope: string[]|string - The <code>naissance.</code> classes to scope the Action to when palettes are brought up.&nbsp;<br><strong>Note: </strong>All <code>Geometry*</code> scopes are automatically bound to Feature if .entities is defined.&nbsp;</li>
           <li>.special_function: <code>async function(arg0_json)</code></li>
         </ul>
       </li>
